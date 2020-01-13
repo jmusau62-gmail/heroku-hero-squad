@@ -1,0 +1,91 @@
+{{#partial "title"}}HomePage{{/partial}}
+
+
+{{#partial "content"}}
+    <div class="row">
+        <h1>SquadHero Application</h1>
+        <div class="col-md-7">
+            <p>Please Add a Hero to Your APP</p>
+            <form action="/postNewHero" method="post" class="form-horizontal">
+                <div class="form-group">
+
+          <div class="col-sm-6">
+        <input type="text" placeholder="Enter Squad Name" name="squadName" class="form-control" >
+</div>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 control-label">Squad Cause</label>
+    <div class="col-sm-6">
+        <textarea type="text" placeholder="Enter Squad Cause" name="cause" class="form-control" ></textarea>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 control-label">Number of Size</label>
+    <div class="col-sm-6">
+        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input type="text" id="spinner" class="ui-spinner-input" name="noOfPages" autocomplete="off" role="spinbutton" aria-valuenow="0"><a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-n">▲</span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-s">▼</span></a></span>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 control-label">Availability</label>
+    <div class="col-sm-6">
+        <div class="rdio rdio-success">
+            <input type="radio" name="availability" value="yes" id="yes">
+            <label for="yes">&nbsp;&nbsp;Yes</label>
+        </div>
+        <div class="rdio rdio-danger">
+            <input type="radio" name="availability" value="no" id="no">
+            <label for="no">&nbsp;&nbsp;No</label>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 control-label">Select Hero</label>
+    <div class="col-sm-5">
+        <select class="form-control input-sm mb15" name="heroSquad">
+            <option value="">-</option>
+            {{#each allHeroes}}
+                <option value="{{id}}">{{heroName}}</option>
+            {{/each}}
+        </select>
+    </div>
+</div>
+
+<button type="submit" class="btn btn-success btn-block">Add Squad</button>
+</form>
+</div>
+<div class="col-md-5">
+    <h3>List of Heroes</h3>
+    {{#if allHeroes}}
+        <p>Here's a list of all the hero's in our APP:</p>
+        <ol>
+            {{#each allHeroes}}
+                <li>{{heroName}} | <a href="/showHerosquad/{{id}}">View Squad</a> </li>
+            {{/each}}
+        </ol>
+    {{else}}
+        <p class="text-danger">Don't have any hero in our APP yet!</p>
+    {{/if}}
+    <hr>
+    <h3>List of Squads</h3>
+    {{#if allSquads}}
+        <p>Here's a list of all the squads in our APP:</p>
+        <ol>
+            {{#each allBooks}}
+                <li>
+                    <h4>{{squadName}} <small>{{maxSize}} Size |
+                        {{#if availability }} <span class="text-success">Available</span> {{else}} <span class="text-danger">Not Available</span> {{/if}} </small></h4>
+                    <p>{{cause}}</p>
+                </li>
+            {{/each}}
+        </ol>
+    {{else}}
+        <p class="text-danger">Don't have any squad in our APP yet!</p>
+    {{/if}}
+
+
+</div>
+</div>
+
+{{/partial}}
+
+{{> layout.hbs}}

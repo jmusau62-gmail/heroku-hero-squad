@@ -1,0 +1,15 @@
+{{#partial "content"}}
+
+    <h1>{{thisHero.heroName}}</h1>
+    <p>Here's a list of all the squads with this hero <strong>{{thisHero.heroName}}</strong>:</p>
+    <ol>
+        {{#each authorBooks}}
+            <li>
+                <h4>{{squadName}} <small>{{maxSize}} Size | <span class="text-success">{{availability}}</span></small></h4>
+                <p>{{cause}}</p>
+            </li>
+        {{/each}}
+    </ol>
+{{/partial}}
+
+{{> layout.hbs}}
