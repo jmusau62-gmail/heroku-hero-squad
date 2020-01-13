@@ -50,7 +50,7 @@
     </div>
 </div>
 
-<button type="submit" class="btn btn-success btn-block">Add Squad</button>
+<button type="submit" class="btn btn-primary btn-block">Add Squad</button>
 </form>
 </div>
 <div class="col-md-5">
@@ -73,13 +73,13 @@
             {{#each allBooks}}
                 <li>
                     <h4>{{squadName}} <small>{{maxSize}} Size |
-                        {{#if availability }} <span class="text-success">Available</span> {{else}} <span class="text-danger">Not Available</span> {{/if}} </small></h4>
+                        {{#if availability }} <span class="text-primary">Available</span> {{else}} <span class="text-danger">Not Available</span> {{/if}} </small></h4>
                     <p>{{cause}}</p>
                 </li>
             {{/each}}
         </ol>
     {{else}}
-        <p class="text-danger">Don't have any squad in our APP yet!</p>
+        <p class="text-primary">Don't have any squad in our APP yet!</p>
     {{/if}}
 
 
