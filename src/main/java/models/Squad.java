@@ -12,7 +12,7 @@ public class Squad {
         this.squadName = squadName;
         this.cause=cause;
         this.maxSize=maxSize;
-        this.availability=availability;
+        this.availability=false;
         allSquads.add(this);
 
     }
