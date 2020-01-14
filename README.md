@@ -9,7 +9,7 @@ Hero & Squad Properties
 During the creation of a new hero/squad, these are the traits that they should contain.
 Hero properties 	Squad properties
 Name 	Name
-Age 	Cause
+Id	Cause
 Strength 	Hero Member(s)
 Weakness 	
 Affiliated Squad 	
