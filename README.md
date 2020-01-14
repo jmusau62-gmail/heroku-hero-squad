@@ -10,7 +10,7 @@ During the creation of a new hero/squad, these are the traits that they should c
 Hero properties 	Squad properties
 Name 	Name
 Id	Cause
- 	Hero Member(s)
+Availability	Hero Member(s)
 Squad 	
         
         
