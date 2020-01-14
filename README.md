@@ -11,12 +11,12 @@ Hero properties 	Squad properties
 Name 	Name
 Id	Cause
 Strength 	Hero Member(s)
-Weakness 	
- Squad 	
-
-
-Built With
-
+Squad 	
+        
+        
+        Built With
+ 	
+ 
     HTML + Handlebars/Moustache
     Css
     Java
