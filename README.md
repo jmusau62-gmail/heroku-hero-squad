@@ -31,7 +31,7 @@ Setup Guide
     OpenJDK Runtime Environment (build 10.0.2+13-Ubuntu-1ubuntu0.18.04.4)
     ... then you need to install java by running this : sudo apt install default-jre
 
-    Clone the repository into a desired folder by running the following link in your terminal: https://github.com//HeroSquad.git
+    Clone the repository into a desired folder by running the following link in your terminal: https://github.com//Heroku-squad-hero.git
 
 (for users with an IDE such as IntelliJ)
 
@@ -45,3 +45,5 @@ Setup Guide
     Compile the code by running: gradle compileJava
     Navigate to the App class file located at build/classes/java/main and run: java App.
 
+KNOWN BUGS:
+n/a
