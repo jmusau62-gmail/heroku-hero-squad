@@ -12,7 +12,7 @@ Name 	Name
 Id	Cause
 Strength 	Hero Member(s)
 Weakness 	
-Affiliated Squad 	
+ Squad 	
 
 
 Built With
